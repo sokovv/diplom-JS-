@@ -17,7 +17,7 @@ class Modal {
         throw new Error("Переданного элемента не существует");
       }
       this.element = element;
-      this.onClose 
+      this.onClose = this.onClose.bind(this)
       this.registerEvents();
     } catch (error) {
       console.error("Error: ", error);
