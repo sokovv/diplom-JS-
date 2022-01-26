@@ -109,9 +109,9 @@ class AccountsWidget {
    * item - объект с данными о счёте
    * */
   getAccountHTML(item) {
-    let accountTemplate = '';
+    let accountContent = '';
     item.forEach(elem => {
-      accountTemplate += `<li class="active account" data-id=${elem.id}>
+      accountContent += `<li class="active account" data-id=${elem.id}>
         <a href="#">
             <span>${elem.name}</span> /
             <span>${elem.sum}</span>
@@ -120,7 +120,7 @@ class AccountsWidget {
     });
 
 
-    return accountTemplate;
+    return accountContent;
   }
 
   /**
@@ -130,7 +130,7 @@ class AccountsWidget {
    * и добавляет его внутрь элемента виджета
    * */
   renderItem(item) {
-    let accountTemplate = this.getAccountHTML(item);
-    this.element.insertAdjacentHTML('beforeend', accountTemplate);
+    let accountContent = this.getAccountHTML(item);
+    this.element.insertAdjacentHTML('beforeend', accountContent);
   }
 }

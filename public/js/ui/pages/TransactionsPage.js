@@ -203,11 +203,11 @@ class TransactionsPage {
    * используя getTransactionHTML
    * */
   renderTransactions(data) {
-    let transactionTemplate = '';
+    let transactionContent = '';
     let content = this.element.querySelector('.content');
     data.forEach(item => {
-      transactionTemplate += this.getTransactionHTML(item);
+      transactionContent += this.getTransactionHTML(item);
     });
-    content.innerHTML = transactionTemplate;
+    content.innerHTML = transactionContent;
   }
 }
