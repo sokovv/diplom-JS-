@@ -1,0 +1,301 @@
+{
+  "users": [
+    {
+      "name": "demo",
+      "email": "demo@demo",
+      "password": "demo",
+      "id": "1"
+    },
+    {
+      "name": "Аля",
+      "email": "sokv37@mail.ru",
+      "password": "1984",
+      "id": "g8u1td3q0kyuauzdq"
+    },
+    {
+      "name": "Валерка",
+      "email": "demdfo@xn--deo-7cdk",
+      "password": "demo454",
+      "id": "g8u1td1qckyuk7591"
+    },
+    {
+      "name": "Алиска",
+      "email": "dem353o@demo",
+      "password": "2050",
+      "id": "g8u1td4i0kyunobrv"
+    },
+    {
+      "name": "Валерик",
+      "email": "sokovv87@demo",
+      "password": "1987",
+      "id": "g8u1td3kckyuvk7oe"
+    },
+    {
+      "name": "Собака",
+      "email": "sok87@demo",
+      "password": "2022",
+      "id": "g8u1td8t0kyuw6s7z"
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Банк",
+      "user_id": "1",
+      "id": "1"
+    },
+    {
+      "name": "Магазин",
+      "user_id": "1",
+      "id": "2"
+    },
+    {
+      "name": "Бизнес",
+      "user_id": "1",
+      "id": "3"
+    },
+    {
+      "name": "Валерик",
+      "user_id": "g8u1td1qckyuk7591",
+      "id": "g8u1tdg0kyuk7n7c"
+    },
+    {
+      "name": "1",
+      "user_id": "g8u1td1qckyuk7591",
+      "id": "g8u1td5bwkyuk8n8h"
+    },
+    {
+      "name": "dgfdgdg",
+      "user_id": "g8u1td1qckyuk7591",
+      "id": "g8u1td64kkyuk9sl5"
+    },
+    {
+      "name": "Мамы",
+      "user_id": "g8u1td4i0kyunobrv",
+      "id": "g8u1td70ckyunor84"
+    },
+    {
+      "name": "Мой",
+      "user_id": "g8u1td4i0kyunobrv",
+      "id": "g8u1td22ckyuvhf0r"
+    },
+    {
+      "name": "ЗП",
+      "user_id": "g8u1td3kckyuvk7oe",
+      "id": "g8u1tdmwkyuvkn40"
+    },
+    {
+      "name": "Еда",
+      "user_id": "g8u1td8t0kyuw6s7z",
+      "id": "g8u1tdn4kyuw71jw"
+    }
+  ],
+  "transactions": [
+    {
+      "account_id": "1",
+      "created_at": "2019-09-15 10:24:02",
+      "id": "1",
+      "name": "Кредит",
+      "sum": 5000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "account_id": "1",
+      "created_at": "2019-09-17 15:53:02",
+      "id": "2",
+      "name": "Баланс на дебетовке",
+      "sum": 3200,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "1",
+      "created_at": "2019-09-19 20:12:02",
+      "id": "3",
+      "name": "Копилка",
+      "sum": 1500,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "2",
+      "created_at": "2019-09-26 16:23:02",
+      "id": "4",
+      "name": "Молочные продукты",
+      "sum": 100,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "2",
+      "created_at": "2019-09-25 15:03:02",
+      "id": "5",
+      "name": "Фрукты",
+      "sum": 250,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "2",
+      "created_at": "2019-09-25 15:03:02",
+      "id": "17",
+      "name": "Овощи",
+      "sum": 300,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "2",
+      "created_at": "2019-09-26 14:47:02",
+      "id": "6",
+      "name": "Мясо",
+      "sum": 600,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "2",
+      "created_at": "2019-09-27 13:27:02",
+      "id": "7",
+      "name": "Долг в банк",
+      "sum": 5000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2017-10-15 13:27:02",
+      "id": "9",
+      "name": "На банду",
+      "sum": 15000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2017-09-17 13:27:02",
+      "id": "10",
+      "name": "На стволы",
+      "sum": 6000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2017-12-27 13:27:02",
+      "id": "11",
+      "name": "Прибыль с банка",
+      "sum": 1500000,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2018-01-15 13:27:02",
+      "id": "13",
+      "name": "Подарок сизого",
+      "sum": 20000,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2017-09-15 13:27:02",
+      "id": "14",
+      "name": "На охрану",
+      "sum": 60000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2017-10-15 13:27:02",
+      "id": "15",
+      "name": "На бумер",
+      "sum": 300000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "id": "g8u1td7pwkyukadnk",
+      "type": "income",
+      "name": "долг",
+      "sum": 5000,
+      "account_id": "g8u1tdg0kyuk7n7c",
+      "user_id": "g8u1td1qckyuk7591",
+      "created_at": "2022-01-25T20:19:03.199Z"
+    },
+    {
+      "id": "g8u1td4hkkyunwqaf",
+      "type": "income",
+      "name": "Корм",
+      "sum": 500,
+      "account_id": "g8u1td70ckyunor84",
+      "user_id": "g8u1td4i0kyunobrv",
+      "created_at": "2022-01-25T22:00:24.854Z"
+    },
+    {
+      "id": "g8u1td98skyunxdey",
+      "type": "expense",
+      "name": "Съела",
+      "sum": 200,
+      "account_id": "g8u1td70ckyunor84",
+      "user_id": "g8u1td4i0kyunobrv",
+      "created_at": "2022-01-25T22:00:54.825Z"
+    },
+    {
+      "id": "g8u1td6ykkyuvi4qd",
+      "type": "income",
+      "name": "Бизнес",
+      "sum": 10000,
+      "account_id": "g8u1td22ckyuvhf0r",
+      "user_id": "g8u1td4i0kyunobrv",
+      "created_at": "2022-01-26T01:33:00.660Z"
+    },
+    {
+      "id": "g8u1td8t0kyuvix0r",
+      "type": "expense",
+      "name": "Кредитт",
+      "sum": 1000,
+      "account_id": "g8u1td22ckyuvhf0r",
+      "user_id": "g8u1td4i0kyunobrv",
+      "created_at": "2022-01-26T01:33:37.322Z"
+    },
+    {
+      "id": "g8u1td8iskyuvlaae",
+      "type": "income",
+      "name": "оклад",
+      "sum": 10000,
+      "account_id": "g8u1tdmwkyuvkn40",
+      "user_id": "g8u1td3kckyuvk7oe",
+      "created_at": "2022-01-26T01:35:27.829Z"
+    },
+    {
+      "id": "g8u1td378kyuvm54l",
+      "type": "expense",
+      "name": "Налоги",
+      "sum": 5000,
+      "account_id": "g8u1tdmwkyuvkn40",
+      "user_id": "g8u1td3kckyuvk7oe",
+      "created_at": "2022-01-26T01:36:07.796Z"
+    },
+    {
+      "id": "g8u1td4cskyuw3cec",
+      "type": "income",
+      "name": "ЗП",
+      "sum": 500000,
+      "account_id": "g8u1tdmwkyuvkn40",
+      "user_id": "g8u1td3kckyuvk7oe",
+      "created_at": "2022-01-26T01:49:30.371Z"
+    },
+    {
+      "id": "g8u1td62skyuw7ng8",
+      "type": "expense",
+      "name": "Корм",
+      "sum": 1000,
+      "account_id": "g8u1tdn4kyuw71jw",
+      "user_id": "g8u1td8t0kyuw6s7z",
+      "created_at": "2022-01-26T01:52:51.319Z"
+    }
+  ]
+}

@@ -9,6 +9,7 @@ class CreateTransactionForm extends AsyncForm {
    * */
   constructor(element) {
     super(element)
+    this.renderAccountsList();
   }
 
   /**
@@ -16,7 +17,17 @@ class CreateTransactionForm extends AsyncForm {
    * Обновляет в форме всплывающего окна выпадающий список
    * */
   renderAccountsList() {
-
+    let currentUser = User.current();
+    Account.list(currentUser, (err, response) => {
+      let data = response.data;
+      console.log(data)
+      let accountsSelect = this.element.querySelector('.accounts-select');
+      let options = '';
+      data.forEach(el => {
+        options += `<option value="${el.id}">${el.name}</option>`;
+      });
+      accountsSelect.innerHTML = options;
+    });
   }
 
   /**
@@ -25,7 +36,16 @@ class CreateTransactionForm extends AsyncForm {
    * вызывает App.update(), сбрасывает форму и закрывает окно,
    * в котором находится форма
    * */
-  onSubmit(data) {
-
+  onSubmit(options) {
+    Transaction.create(options, (err, response) => {
+        if (response.success == true) {
+        this.element.reset();
+        App.getModal('newIncome').close();
+        App.getModal('newExpense').close();
+        App.update();
+      } else {
+        console.log('Ошибка создания счета: ' + response.error);
+      }
+    });
   }
 }

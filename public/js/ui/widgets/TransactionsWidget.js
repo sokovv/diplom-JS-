@@ -11,8 +11,16 @@ class TransactionsWidget {
    * Если переданный элемент не существует,
    * необходимо выкинуть ошибку.
    * */
-  constructor( element ) {
-
+  constructor(element) {
+    try {
+      if (!element) {
+        throw new Error("Переданного элемента не существует");
+      }
+      this.element = element;
+      this.registerEvents();
+    } catch (error) {
+      console.error("Error: ", error);
+    }
   }
   /**
    * Регистрирует обработчики нажатия на
@@ -21,6 +29,14 @@ class TransactionsWidget {
    * экземпляра окна
    * */
   registerEvents() {
+    this.element.addEventListener('click', event => {
+      if (event.target.closest('.create-income-button')) {
+        App.getModal('newIncome').open();
+      }
 
+      if (event.target.closest('.create-expense-button')) {
+        App.getModal('newExpense').open();
+      }
+    });
   }
 }
