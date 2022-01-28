@@ -15,14 +15,7 @@ class Entity {
       url: this.URL,
       data,
       method: 'GET',
-      callback: (err, response) => {
-        if (err) {
-          console.log('Ошибка', err);
-        } else {
-          console.log('Данные, если нет ошибки', response);
-        }
-        callback(err, response);
-      }
+      callback
     })
   }
 
@@ -36,14 +29,7 @@ class Entity {
       url: this.URL,
       data,
       method: 'PUT',
-      callback: (err, response) => {
-        if (err) {
-          console.log('Ошибка', err);
-        } else {
-          console.log('Данные, если нет ошибки', response);
-        }
-        callback(err, response);
-      }
+      callback
     })
   }
 
@@ -56,14 +42,7 @@ class Entity {
       url: this.URL,
       data,
       method: 'DELETE',
-      callback: (err, response) => {
-        if (err) {
-          console.log('Ошибка', err);
-        } else {
-          console.log('Данные, если нет ошибки', response);
-        }
-        callback(err, response);
-      }
+      callback
     })
   }
 }

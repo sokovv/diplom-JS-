@@ -137,6 +137,11 @@
       "name": "Сбер",
       "user_id": "g8u1td5qokyxxb69j",
       "id": "g8u1td8mkkyxxbdzs"
+    },
+    {
+      "name": "Квартира",
+      "user_id": "1",
+      "id": "g8u1tdn0kyxzvr76"
     }
   ],
   "transactions": [
@@ -156,24 +161,6 @@
       "name": "Прибыль с банка",
       "sum": 1500000,
       "type": "income",
-      "user_id": "1"
-    },
-    {
-      "account_id": "3",
-      "created_at": "2018-01-15 13:27:02",
-      "id": "13",
-      "name": "Подарок сизого",
-      "sum": 20000,
-      "type": "income",
-      "user_id": "1"
-    },
-    {
-      "account_id": "3",
-      "created_at": "2017-09-15 13:27:02",
-      "id": "14",
-      "name": "На охрану",
-      "sum": 60000,
-      "type": "expense",
       "user_id": "1"
     },
     {
@@ -346,6 +333,24 @@
       "account_id": "g8u1td8mkkyxxbdzs",
       "user_id": "g8u1td5qokyxxb69j",
       "created_at": "2022-01-28T04:47:47.414Z"
+    },
+    {
+      "id": "g8u1td8lckyxzw0io",
+      "type": "expense",
+      "name": "комуналка",
+      "sum": 5000,
+      "account_id": "1",
+      "user_id": "1",
+      "created_at": "2022-01-28T05:59:05.375Z"
+    },
+    {
+      "id": "g8u1td94okyxzwbzz",
+      "type": "income",
+      "name": "Сдача",
+      "sum": 10000,
+      "account_id": "g8u1tdn0kyxzvr76",
+      "user_id": "1",
+      "created_at": "2022-01-28T05:59:20.254Z"
     }
   ]
 }
