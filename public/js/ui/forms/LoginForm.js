@@ -16,8 +16,6 @@ class LoginForm extends AsyncForm {
       console.log(response.success)
       if (response.success == true) {
         let login = App.getModal('login');
-        let form = document.getElementById('login-form');
-        form.reset();
         App.setState('user-logged');
         login.close();
       } else {

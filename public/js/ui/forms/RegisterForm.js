@@ -16,8 +16,6 @@ class RegisterForm extends AsyncForm {
       if (response.success == true) {
         App.setState('user-logged');
         let register = App.getModal('register');
-        let form = document.getElementById('register-form');
-        form.reset();
         register.close();
       } else {
         console.log('Ошибка регистрации: ' + response.error);

@@ -12,17 +12,15 @@ class TransactionsPage {
    * через registerEvents()
    * */
   constructor(element) {
-    try {
-      if (!element) {
-        throw new Error("Переданного элемента не существует");
-      }
+    if (!element) {
+      alert("Переданного элемента не существует");
+    } else {
       this.element = element;
       this.lastOptions = '';
       this.registerEvents();
-    } catch (error) {
-      console.error("Error: ", error);
     }
   }
+
 
   /**
    * Вызывает метод render для отрисовки страницы
@@ -106,22 +104,18 @@ class TransactionsPage {
   render(options) {
     this.lastOptions = options;
     Account.get(options.account_id, (err, response) => {
-      if (response.success == true) {
-        for (let i = 0; i < response.data.length; i++) {
-          if (response.data[i].id == options.account_id) {
-            console.log(response.data)
-            this.renderTitle(response.data[i].name)
-            Transaction.list(options, (err, response) => {
-              console.log('Трансклист')
-              console.log(response)
-              this.renderTransactions(response.data);
-            });
-
-          }
-        }
-      } else {
-        console.log(err)
+      if (response.data.name) {
+        this.renderTitle(response.data.name)
       }
+      Transaction.list(options, (err, response) => {
+        if (response.success == true) {
+          console.log('Транслист')
+          console.log(response)
+          this.renderTransactions(response.data);
+        } else {
+          console.log(err)
+        }
+      });
     }
     )
 
@@ -162,7 +156,6 @@ class TransactionsPage {
     };
     return newDate.toLocaleString("ru", options);
   }
-  "2017-10-15 13:27:02"
   /**
    * Формирует HTML-код транзакции (дохода или расхода).
    * item - объект с информацией о транзакции

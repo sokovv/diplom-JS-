@@ -13,16 +13,12 @@ class AsyncForm {
    * через registerEvents()
    * */
   constructor(element) {
-    try {
-      if (!element) {
-        throw new Error("Переданного элемента не существует");
-      }
+    if (!element) {
+      alert("Переданного элемента не существует");
+    } else {
       this.element = element;
       this.registerEvents();
-    } catch (error) {
-      console.error("Error: ", error);
     }
-
   }
 
   /**
@@ -66,8 +62,6 @@ class AsyncForm {
    * данные, полученные из метода getData()
    * */
   submit() {
-    let data = this.getData();
-
-    this.onSubmit(data);
+    this.onSubmit(this.getData());
   }
 }

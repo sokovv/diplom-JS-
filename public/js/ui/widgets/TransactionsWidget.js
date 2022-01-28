@@ -12,14 +12,11 @@ class TransactionsWidget {
    * необходимо выкинуть ошибку.
    * */
   constructor(element) {
-    try {
-      if (!element) {
-        throw new Error("Переданного элемента не существует");
-      }
+    if (!element) {
+      alert("Переданного элемента не существует");
+    } else {
       this.element = element;
       this.registerEvents();
-    } catch (error) {
-      console.error("Error: ", error);
     }
   }
   /**

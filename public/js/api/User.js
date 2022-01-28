@@ -10,7 +10,7 @@ class User {
    * локальном хранилище.
    * */
   static setCurrent(user) {
-    localStorage.setItem('user', '{"id": "' + user.id + '", "name": "' + user.name + '"}');
+    localStorage.setItem('user', JSON.stringify(user));
     return localStorage.user
   }
 
@@ -27,13 +27,8 @@ class User {
    * из локального хранилища
    * */
   static current() {
-    if (localStorage.user) {
-      const current = JSON.parse(localStorage.user);
-      return current
-    }
-    return undefined
+    return JSON.parse(localStorage.getItem('user'));
   }
-
   /**
    * Получает информацию о текущем
    * авторизованном пользователе.
@@ -103,9 +98,11 @@ class User {
       url: User.URL + '/logout',
       method: 'POST',
       callback: (err, response) => {
-        if (response.success === true) {
-          this.unsetCurrent();
+        if (response.success) {
+          User.unsetCurrent();
+          App.setState()
         }
+        callback(err, response);
       }
     })
   }

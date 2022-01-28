@@ -32,32 +32,17 @@ const createRequest = (options = {}) => {
   }
   xhr.responseType = "json"
   xhr.onload = () => {
-    if (xhr.status != 200) {
-      console.log('Ошибка статуса' + xhr.status)
-      return;
-    }
     const response = xhr.response;
     if (response) {
       let err;
-      if ("error" in response) {
-        err = response.error
-      } else {
-        err = null
-      }
+      "error" in response ? err = response.error : err = null
       options.callback(err, response)
     } else {
       console.log('Нет ответа на запрос')
     }
 
   }
-  xhr.onprogress = (e) => {
-    // если сервер присылает заголовок Content-Length
-    if (e.lengthComputable) {
-      console.log(`Получено ${e.loaded} из ${e.total} байт`);
-    } else {
-      console.log(`Получено ${e.loaded} байт`);
-    }
-  }
+
   xhr.onerror = () => { // происходит, только когда запрос совсем не получилось выполнить
     console.log(`Ошибка при выполнении запроса`);
   };
